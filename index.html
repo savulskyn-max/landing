@@ -2,14 +2,512 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
+    <title>Alpha IT - Sistema de gestión con IA para tiendas de ropa</title>
+    <meta
+      name="description"
+      content="Sistema de gestión integral para tiendas de ropa potenciado por IA. Automatizá tu negocio, aumentá tus ventas y optimizá tu tiempo."
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Alpha IT - AI-Powered Clothing Store Management System</title>
 
-    <!-- Tailwind CDN -->
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Raleway:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS por CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      body {
+        margin: 0;
+        background-color: #132229;
+        color: #ffffff;
+      }
+
+      .font-space-grotesk {
+        font-family: "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", sans-serif;
+      }
+
+      .font-raleway {
+        font-family: "Raleway", system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", sans-serif;
+      }
+
+      /* Animaciones suaves */
+      .floating {
+        animation: float 4s ease-in-out infinite;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+        transform: translateY(-8px);
+        }
+      }
+    </style>
   </head>
   <body class="bg-[#132229]">
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <!-- HERO -->
+    <section
+      class="relative min-h-screen flex items-center justify-center overflow-hidden"
+      id="inicio"
+    >
+      <!-- Fondos circulares -->
+      <div class="absolute inset-0 overflow-hidden pointer-events-none">
+        <div
+          class="absolute top-20 left-10 w-72 h-72 bg-[#ED7C00] opacity-10 rounded-full blur-3xl"
+        ></div>
+        <div
+          class="absolute bottom-20 right-10 w-96 h-96 bg-[#325F6F] opacity-10 rounded-full blur-3xl"
+        ></div>
+      </div>
+
+      <div
+        class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 grid lg:grid-cols-2 gap-12 items-center"
+      >
+        <!-- Columna izquierda -->
+        <div class="text-left">
+          <!-- Logo -->
+          <div class="mb-8">
+            <img
+              src="https://horizons-cdn.hostinger.com/755dd77c-8478-4a0d-820e-434c6802669e/d2ce17b35ba5927b4419f063d4e568b3.png"
+              alt="Alpha IT Logo"
+              class="h-10 w-auto"
+            />
+          </div>
+
+          <!-- Título -->
+          <h1
+            class="font-space-grotesk font-bold text-4xl sm:text-5xl lg:text-6xl text-white mb-6 leading-tight"
+          >
+            Revolucioná tu negocio con
+            <span class="text-[#ED7C00]">Inteligencia Artificial</span>
+          </h1>
+
+          <!-- Subtítulo -->
+          <p
+            class="font-raleway text-lg sm:text-xl text-[#CDD4DA] mb-8 leading-relaxed"
+          >
+            Sistema de gestión integral para tiendas de ropa potenciado por IA.
+            Automatizá tu negocio, aumentá tus ventas y optimizá tu tiempo.
+          </p>
+
+          <!-- Botón WhatsApp -->
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a
+              href="https://wa.me/543455463110"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="bg-[#ED7C00] hover:bg-[#ED7C00]/90 text-white font-raleway font-semibold px-8 py-6 text-lg rounded-lg shadow-lg shadow-[#ED7C00]/20 transition-all duration-300 hover:shadow-xl hover:shadow-[#ED7C00]/30 hover:scale-105 inline-flex items-center justify-center"
+            >
+              Contactar por WhatsApp
+              <span class="ml-2 text-xl">➜</span>
+            </a>
+          </div>
+
+          <!-- Indicadores -->
+          <div class="mt-12 flex items-center gap-8 flex-wrap">
+            <div class="flex items-center gap-2">
+              <div
+                class="w-2 h-2 bg-[#ED7C00] rounded-full animate-pulse"
+              ></div>
+              <span class="text-[#CDD4DA] font-raleway text-sm"
+                >100% Automatizado</span
+              >
+            </div>
+            <div class="flex items-center gap-2">
+              <div
+                class="w-2 h-2 bg-[#ED7C00] rounded-full animate-pulse"
+              ></div>
+              <span class="text-[#CDD4DA] font-raleway text-sm"
+                >IA Integrada</span
+              >
+            </div>
+            <div class="flex items-center gap-2">
+              <div
+                class="w-2 h-2 bg-[#ED7C00] rounded-full animate-pulse"
+              ></div>
+              <span class="text-[#CDD4DA] font-raleway text-sm"
+                >Soporte 24/7</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Columna derecha -->
+        <div class="relative">
+          <div class="relative">
+            <!-- Glow -->
+            <div
+              class="absolute inset-0 bg-gradient-to-br from-[#ED7C00]/20 to-[#325F6F]/20 rounded-2xl blur-2xl"
+            ></div>
+
+            <!-- Imagen -->
+            <div
+              class="relative bg-gradient-to-br from-[#325F6F]/20 to-[#132229]/40 backdrop-blur-sm rounded-2xl p-4 border border-[#325F6F]/30 floating"
+            >
+              <img
+                src="https://horizons-cdn.hostinger.com/755dd77c-8478-4a0d-820e-434c6802669e/logos-alpha-it-01-vxUNQ.png"
+                alt="Alpha IT - Dashboard"
+                class="w-full h-auto rounded-lg shadow-2xl"
+              />
+            </div>
+
+            <!-- Etiqueta flotante -->
+            <div
+              class="absolute -top-6 -right-6 bg-[#ED7C00] text-white px-6 py-3 rounded-full shadow-lg font-space-grotesk font-bold floating"
+              style="animation-delay: 0.5s"
+            >
+              IA Potenciada
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section
+      id="features"
+      class="relative py-24 bg-gradient-to-b from-[#132229] to-[#132229]/95"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Header -->
+        <div class="text-center mb-16">
+          <span
+            class="text-[#ED7C00] font-space-grotesk font-semibold text-sm uppercase tracking-wider bg-[#ED7C00]/10 px-4 py-2 rounded-full border border-[#ED7C00]/20"
+          >
+            Funcionalidades
+          </span>
+
+          <h2
+            class="font-space-grotesk font-bold text-3xl sm:text-4xl lg:text-5xl text-white mb-6 mt-4"
+          >
+            Todo lo que necesitás en
+            <span class="text-[#ED7C00]"> un solo lugar</span>
+          </h2>
+
+          <p
+            class="font-raleway text-lg text-[#CDD4DA] max-w-2xl mx-auto"
+          >
+            Potenciá tu negocio con tecnología de vanguardia diseñada
+            específicamente para tiendas de ropa.
+          </p>
+        </div>
+
+        <!-- Grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Card 1 -->
+          <div
+            class="bg-gradient-to-br from-[#325F6F]/10 to-[#132229]/40 backdrop-blur-sm rounded-2xl p-8 border border-[#325F6F]/20 hover:border-[#ED7C00]/40 transition-all"
+          >
+            <div
+              class="inline-flex items-center justify-center w-16 h-16 rounded-xl mb-6"
+              style="background-color: #ed7c0015"
+            >
+              <span class="text-3xl">🧠</span>
+            </div>
+            <h3
+              class="font-space-grotesk font-bold text-xl text-white mb-3"
+            >
+              Análisis de Datos con IA
+            </h3>
+            <p class="font-raleway text-[#CDD4DA] leading-relaxed">
+              Inteligencia artificial que analiza tus ventas, predice
+              tendencias y te ayuda a tomar decisiones estratégicas
+              basadas en datos reales.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="bg-gradient-to-br from-[#325F6F]/10 to-[#132229]/40 backdrop-blur-sm rounded-2xl p-8 border border-[#325F6F]/20 hover:border-[#ED7C00]/40 transition-all"
+          >
+            <div
+              class="inline-flex items-center justify-center w-16 h-16 rounded-xl mb-6"
+              style="background-color: #325f6f15"
+            >
+              <span class="text-3xl">⚙️</span>
+            </div>
+            <h3
+              class="font-space-grotesk font-bold text-xl text-white mb-3"
+            >
+              Gestión Automática
+            </h3>
+            <p class="font-raleway text-[#CDD4DA] leading-relaxed">
+              Automatizá control de stock, actualizaciones de precios y
+              gestión de inventario. El sistema trabaja por vos las 24
+              horas.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="bg-gradient-to-br from-[#325F6F]/10 to-[#132229]/40 backdrop-blur-sm rounded-2xl p-8 border border-[#325F6F]/20 hover:border-[#ED7C00]/40 transition-all"
+          >
+            <div
+              class="inline-flex items-center justify-center w-16 h-16 rounded-xl mb-6"
+              style="background-color: #ed7c0015"
+            >
+              <span class="text-3xl">📄</span>
+            </div>
+            <h3
+              class="font-space-grotesk font-bold text-xl text-white mb-3"
+            >
+              Integración ARCA
+            </h3>
+            <p class="font-raleway text-[#CDD4DA] leading-relaxed">
+              Facturación electrónica integrada con ARCA (ex-AFIP).
+              Emitir facturas nunca fue tan fácil y rápido.
+            </p>
+          </div>
+
+          <!-- Card 4 -->
+          <div
+            class="bg-gradient-to-br from-[#325F6F]/10 to-[#132229]/40 backdrop-blur-sm rounded-2xl p-8 border border-[#325F6F]/20 hover:border-[#ED7C00]/40 transition-all"
+          >
+            <div
+              class="inline-flex items-center justify-center w-16 h-16 rounded-xl mb-6"
+              style="background-color: #325f6f15"
+            >
+              <span class="text-3xl">🛍️</span>
+            </div>
+            <h3
+              class="font-space-grotesk font-bold text-xl text-white mb-3"
+            >
+              Tienda Nube Compatible
+            </h3>
+            <p class="font-raleway text-[#CDD4DA] leading-relaxed">
+              Sincronización automática con tu tienda online de Tienda
+              Nube. Productos, stock y pedidos siempre actualizados.
+            </p>
+          </div>
+
+          <!-- Card 5 -->
+          <div
+            class="bg-gradient-to-br from-[#325F6F]/10 to-[#132229]/40 backdrop-blur-sm rounded-2xl p-8 border border-[#325F6F]/20 hover:border-[#ED7C00]/40 transition-all"
+          >
+            <div
+              class="inline-flex items-center justify-center w-16 h-16 rounded-xl mb-6"
+              style="background-color: #ed7c0015"
+            >
+              <span class="text-3xl">💬</span>
+            </div>
+            <h3
+              class="font-space-grotesk font-bold text-xl text-white mb-3"
+            >
+              Bots de Redes Sociales
+            </h3>
+            <p class="font-raleway text-[#CDD4DA] leading-relaxed">
+              Automatización inteligente de publicaciones en Instagram,
+              Facebook y otras plataformas.
+            </p>
+          </div>
+
+          <!-- Card 6 -->
+          <div
+            class="bg-gradient-to-br from-[#325F6F]/10 to-[#132229]/40 backdrop-blur-sm rounded-2xl p-8 border border-[#325F6F]/20 hover:border-[#ED7C00]/40 transition-all"
+          >
+            <div
+              class="inline-flex items-center justify-center w-16 h-16 rounded-xl mb-6"
+              style="background-color: #325f6f15"
+            >
+              <span class="text-3xl">✨</span>
+            </div>
+            <h3
+              class="font-space-grotesk font-bold text-xl text-white mb-3"
+            >
+              Asistente IA 24/7
+            </h3>
+            <p class="font-raleway text-[#CDD4DA] leading-relaxed">
+              Tu asistente virtual responde consultas, gestiona pedidos y
+              da atención personalizada todo el día.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="contact" class="relative py-24 overflow-hidden">
+      <!-- Fondos -->
+      <div class="absolute inset-0 pointer-events-none">
+        <div
+          class="absolute top-0 left-1/4 w-96 h-96 bg-[#ED7C00] opacity-10 rounded-full blur-3xl"
+        ></div>
+        <div
+          class="absolute bottom-0 right-1/4 w-96 h-96 bg-[#325F6F] opacity-10 rounded-full blur-3xl"
+        ></div>
+      </div>
+
+      <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="relative bg-gradient-to-br from-[#ED7C00]/20 via-[#325F6F]/10 to-[#132229]/40 backdrop-blur-sm rounded-3xl p-12 border border-[#ED7C00]/30 overflow-hidden"
+        >
+          <!-- Header -->
+          <div class="text-center mb-12">
+            <div
+              class="inline-flex items-center gap-2 bg-[#ED7C00] text-white px-6 py-2 rounded-full mb-6 shadow-lg shadow-[#ED7C00]/30"
+            >
+              <span class="text-sm font-space-grotesk font-semibold"
+                >Oferta Especial</span
+              >
+            </div>
+
+            <h2
+              class="font-space-grotesk font-bold text-3xl sm:text-4xl lg:text-5xl text-white mb-6 leading-tight"
+            >
+              Comenzá a transformar tu negocio
+              <span class="text-[#ED7C00]"> hoy mismo</span>
+            </h2>
+
+            <p
+              class="font-raleway text-lg text-[#CDD4DA] max-w-2xl mx-auto mb-8"
+            >
+              Unite a las tiendas que ya están revolucionando su gestión
+              con Alpha IT. Hablá con nuestro equipo y descubrí cómo
+              podemos ayudarte.
+            </p>
+          </div>
+
+          <!-- Beneficios -->
+          <div class="grid sm:grid-cols-2 gap-4 mb-10">
+            <div
+              class="flex items-center gap-3 bg-[#325F6F]/10 backdrop-blur-sm rounded-lg px-4 py-3 border border-[#325F6F]/20"
+            >
+              <span class="text-[#ED7C00] text-lg">✔</span>
+              <span class="font-raleway text-[#CDD4DA]"
+                >Sin costos de instalación</span
+              >
+            </div>
+            <div
+              class="flex items-center gap-3 bg-[#325F6F]/10 backdrop-blur-sm rounded-lg px-4 py-3 border border-[#325F6F]/20"
+            >
+              <span class="text-[#ED7C00] text-lg">✔</span>
+              <span class="font-raleway text-[#CDD4DA]"
+                >Soporte técnico incluido</span
+              >
+            </div>
+            <div
+              class="flex items-center gap-3 bg-[#325F6F]/10 backdrop-blur-sm rounded-lg px-4 py-3 border border-[#325F6F]/20"
+            >
+              <span class="text-[#ED7C00] text-lg">✔</span>
+              <span class="font-raleway text-[#CDD4DA]"
+                >Actualizaciones automáticas</span
+              >
+            </div>
+            <div
+              class="flex items-center gap-3 bg-[#325F6F]/10 backdrop-blur-sm rounded-lg px-4 py-3 border border-[#325F6F]/20"
+            >
+              <span class="text-[#ED7C00] text-lg">✔</span>
+              <span class="font-raleway text-[#CDD4DA]"
+                >Capacitación personalizada</span
+              >
+            </div>
+          </div>
+
+          <!-- Botón CTA -->
+          <div class="text-center">
+            <a
+              href="https://wa.me/543455463110"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="bg-[#ED7C00] hover:bg-[#ED7C00]/90 text-white font-raleway font-bold px-12 py-7 text-xl rounded-xl shadow-2xl shadow-[#ED7C00]/30 transition-all duration-300 hover:shadow-[#ED7C00]/50 hover:scale-105 inline-flex items-center justify-center"
+            >
+              <span class="mr-3 text-2xl">💬</span>
+              Contactar por WhatsApp
+            </a>
+            <p class="font-raleway text-sm text-[#CDD4DA] mt-4">
+              Respuesta en menos de 24 horas • Consultoría gratuita
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer
+      class="relative bg-[#132229] border-t border-[#325F6F]/20 py-12 mt-12"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-3 gap-12 mb-8">
+          <!-- Brand -->
+          <div>
+            <img
+              src="https://horizons-cdn.hostinger.com/755dd77c-8478-4a0d-820e-434c6802669e/d2ce17b35ba5927b4419f063d4e568b3.png"
+              alt="Alpha IT Logo"
+              class="h-10 w-auto mb-4"
+            />
+            <p class="text-[#CDD4DA] font-raleway text-sm leading-relaxed">
+              Sistema de gestión integral para tiendas de ropa potenciado por
+              inteligencia artificial.
+            </p>
+          </div>
+
+          <!-- Contacto -->
+          <div>
+            <span
+              class="text-white font-space-grotesk font-semibold text-lg block mb-4"
+              >Contacto</span
+            >
+            <div class="space-y-3 text-[#CDD4DA] font-raleway text-sm">
+              <div class="flex items-center gap-3">
+                <span class="text-[#ED7C00] text-lg">✉</span>
+                <span>savulskyn@alphaitgroup.com</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="text-[#ED7C00] text-lg">📞</span>
+                <span>+54 3455 463110</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="text-[#ED7C00] text-lg">📍</span>
+                <span>Córdoba, Argentina</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Enlaces -->
+          <div>
+            <span
+              class="text-white font-space-grotesk font-semibold text-lg block mb-4"
+              >Enlaces</span
+            >
+            <nav class="space-y-2">
+              <a
+                href="#features"
+                class="block text-[#CDD4DA] font-raleway text-sm hover:text-[#ED7C00] transition-colors duration-300"
+                >Funcionalidades</a
+              >
+              <a
+                href="#contact"
+                class="block text-[#CDD4DA] font-raleway text-sm hover:text-[#ED7C00] transition-colors duration-300"
+                >Contacto</a
+              >
+            </nav>
+          </div>
+        </div>
+
+        <div
+          class="pt-8 border-t border-[#325F6F]/20 text-center text-[#CDD4DA] font-raleway text-sm"
+        >
+          © <span id="year"></span> Alpha IT. Todos los derechos reservados.
+        </div>
+      </div>
+
+      <script>
+        document.getElementById("year").textContent =
+          new Date().getFullYear();
+      </script>
+    </footer>
   </body>
 </html>
